@@ -1,0 +1,44 @@
+body {
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(-45deg, #4b7aaf, #141E30);
+    margin: 0;
+    padding: 0;
+  }
+* {
+    color: white;
+
+}
+
+title {
+    font-family: cursive;
+}
+
+.intro {
+    color: #FFF;
+    font-size: 38px;
+  }
+
+#submit {
+    color: black;
+}
+
+label {
+  color: aliceblue;
+  line-height: 22px;
+  text-align: justify;
+  width: 100%;
+  font-weight: bold;
+
+}
+body.background {
+  margin: 100px;
+  height: 320px;
+  width: 450px;
+  border: 3px white solid;
+  border-radius: 20px;
+  padding: 30px;
+}
+
+input {
+  color: black;
+}

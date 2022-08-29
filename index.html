@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+
+<html lan="en" dir="ltr">
+    <head>
+        <meta charset=""utf-8">
+        <link rel="stylesheet" type="text/css" href="style.css">
+
+        <title>Programming | MM Hayes</title>
+    </head>
+    <body class="background" id="contact-form">
+        <header>
+            <h1 class="intro">Required Information</h1>
+        </header>
+        <form name="contract" id="contact" action="contact.php" method="POST" class="ajax">
+            <fieldset>
+                <div class="input-fields">
+                    <label for="employee-name">Employee Name</label>
+                    <input type="text" name="employee-name" id="employee-name" minlength="3" required>
+                </div>
+                <div class="input-fields">
+                    <label for="employee-number">Employee Number</label>
+                    <input type="text" name="employee-number" id="employee-number" required>
+                </div>
+                <div class="input-fields">
+                    <label for="phone-number">Phone Number</label>
+                    <input type="text" placeholder="(123) 456-7890" id="phone-number" name="phone-number" onkeydown="phone_number:backspacerDOWN(this,event);" onkeyup="phone_number:backspacerUP(this,event);" required>
+                </div>
+                <div class="input-fields"></div>
+                    <label for="address">Address</label>
+                    <input type="text" name="address" id="address" required>
+                </div>
+                <div class="input-fields">
+                    <label for="city">City</label>
+                    <input type="text" name="city" id="city" required>
+                </div>
+                <div class="input-fields">
+                    <label for="state">State</label>
+                    <input type="text" list="states" name="state" id="state" minlength="2" required>
+                    <datalist id="states">
+                        <option value="Alabama"></option>
+                        <option value="Alaska"></option>
+                        <option value="Arizona"></option>
+                        <option value="Arkansas"></option>
+                        <option value="California"></option>
+                        <option value="Colorado"></option>
+                        <option value="Connecticut"></option>
+                        <option value="Delaware"></option>
+                        <option value="Florida"></option>
+                        <option value="Georgia"></option>
+                        <option value="Hawaii"></option>
+                        <option value="Idaho"></option>
+                        <option value="Illinois"></option>
+                        <option value="Indiana"></option>
+                        <option value="Iowa"></option>
+                        <option value="Kansas"></option>
+                        <option value="Kentucky"></option>
+                        <option value="Louisiana"></option>
+                        <option value="Maine"></option>
+                        <option value="Maryland"></option>
+                        <option value="Massachusetts"></option>
+                        <option value="Michigan"></option>
+                        <option value="Minnesota"></option>
+                        <option value="Mississippi"></option>
+                        <option value="Missouri"></option>
+                        <option value="Montana"></option>
+                        <option value="Nebraska"></option>
+                        <option value="Nevada"></option>
+                        <option value="New Hampshire"></option>
+                        <option value="New Jersey"></option>
+                        <option value="New Mexico"></option>
+                        <option value="New York"></option>
+                        <option value="North Carolina"></option>
+                        <option value="North Dakota"></option>
+                        <option value="Ohio"></option>
+                        <option value="Oklahoma"></option>
+                        <option value="Oregon"></option>
+                        <option value="Pennsylvania"></option>
+                        <option value="Rhode Island"></option>
+                        <option value="South Carolina"></option>
+                        <option value="South Dakota"></option>
+                        <option value="Tennessee"></option>
+                        <option value="Texas"></option>
+                        <option value="Utah"></option>
+                        <option value="Vermont"></option>
+                        <option value="Virginia"></option>
+                        <option value="Washington"></option>
+                        <option value="West Virginia"></option>
+                        <option value="Wisconsin"></option>
+                        <option value="Wyoming"></option>
+                    </datalist>
+                </div>
+                <div class="input-fields">
+                    <label for="zip-code">Zip</label>
+                    <input type="text" name="zip-code" id="zip-code" minlength="5" required>
+                </div>
+                <div class="input-fields">
+                    <label for="current-employee">Current Employee?</label>
+                    <label for="yes">Yes</label>
+                    <input type="radio" name="current-employee" id="yes" required>
+                    <label for="no">No</label>
+                    <input type="radio" name="current-employee" id="no" required>
+                </div>
+                <div class="submit-field">
+                    <input id="submit_btn" name="submit" class="button" type="submit" value="Send">
+                </div>
+            </fieldset>
+        </form>
+
+        <div class="results">
+            <p class="results-json-output"></p>
+        </div>
+
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script src="form_to_json.js"></script>
+        <script src="main.js"></script>
+        <script src="phone_number.js"></script>
+    </body>
+</html>
